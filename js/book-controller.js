@@ -92,7 +92,8 @@ function onSaveBook() {
     elBookPriceInput.value = '';
     elBookEditOrAdd.hidden = true;
     renderPages();
-    onToADiffPage('', 'create')
+    onToADiffPage('', 'create');
+    doTranslate();
     renderDefaultCursorIfFirstOrLastPage();
 }
 
@@ -104,14 +105,7 @@ function onReadBook(bookId) {
     elModal.querySelector('span').innerHTML = book.rate;
     elModal.querySelector('p').innerText = book.desc;
     elModal.querySelector('h5').innerText = '$' + book.price;
-    // elModal.show();
-    // elModal.hidden = false;
-}
-
-function onCloseModal() {
-    var elModal = document.querySelector('.modal');
-    elModal.hide();
-}
+}    
 
 function onRateBook(num) {
     var clickedBookToCheck = document.querySelector('h4').innerText;
@@ -146,6 +140,7 @@ function onNextPage() {
     });
     renderDefaultCursorIfFirstOrLastPage();
     renderBooks();
+    doTranslate();
 }
 
 function onPrevPage() {
@@ -164,6 +159,7 @@ function onPrevPage() {
     });
     renderDefaultCursorIfFirstOrLastPage();
     renderBooks();
+    doTranslate();    
 }
 
 function onToADiffPage(page, action) {
@@ -190,6 +186,7 @@ function onToADiffPage(page, action) {
     });
     getDiffPage(page, action);
     renderBooks();
+    doTranslate();    
     renderDefaultCursorIfFirstOrLastPage();
 }
 
