@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Books Shop</title>
+</head>
+
+<body onload="onInit()">
+    <h1 data-trans="title">Welcome to the Book Store</h1>
+    <select onchange="onSetLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+    </select>
+    <a href="#" onclick="onAddBook()" data-trans="add">Create a new book</a>
+    <section class="book-editor-add" hidden>
+        <input type="text" name="title" data-trans="title-placeholder" placeholder="Title">
+        <input type="number" name="price" data-trans="price-placeholder" placeholder="Price">
+        <button onclick="onSaveBook()" data-trans="save">Save</button>
+    </section>
+    <div class="table-responsive">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th data-trans="id">Id</th>
+                    <th class="title-sort" onclick="onSortChange('title')" data-trans="sortby-title">Title</th>
+                    <th class="price-sort" onclick="onSortChange('price')" data-trans="sortby-price">Price</th>
+                    <th colspan="3" data-trans="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="paging">
+    </div>
+    
+    <div class="modal fade text-center" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="">
+                    <h5></h5>
+                    <p></p>
+                    <button class="rate-btn" onclick="onRateBook(-1)">-</button><span class="book-rate"></span><button
+                        class="rate-btn" onclick="onRateBook(1)">+</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-trans="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/book-controller.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/util-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="lib/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+html {
+    background: url(../img/bookstore) no-repeat center center fixed;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+h1 {
+    color: brown;
+}
+
+a{
+    text-decoration: none;
+    align-self: center;
+    margin-block-start: 2rem;
+}
+
+input {
+    width: 7rem;
+}
+
+.book-editor-add {
+    margin-block-start: 1rem;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    /* border: none; */
+}
+
+table {
+    margin-top: 1rem;
+    text-align: center;
+    width: 60rem;
+}
+
+.table-responsive {
+    width: -webkit-fill-available;
+    margin: 2rem auto auto auto;
+}
+
+.table {
+    width: 60rem;
+}
+
+th {
+    border: 0.1rem solid black;
+}
+
+.title-sort:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.price-sort:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+td {
+    border: 0.05rem solid black;
+    height: 2rem;
+}
+
+.read-btn {
+    background-color: blue;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.update-btn {
+    background-color: orange;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.paging {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.prev-page {
+    background-color: burlywood;
+    margin: auto;
+    cursor: auto;
+    border: none;
+}
+
+.next-page {
+    background-color: burlywood;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.page {
+    border: none;
+    background-color: burlywood;
+    margin: auto 0.1rem auto 0.1rem;
+}
+
+.modal {
+    /* width: 21rem;
+    background-color: lightgray;
+    padding: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    height: 100%;
+    min-width: 20rem;
+    text-align: center; */
+}
+
+.close-modal-btn {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.book-rate {
+    padding: 0.1rem 1rem 0.2rem 1rem;
+    background-color: white;
+}
+
+.rate-btn {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+}
+
+.active {
+    background-color: lightgray;
+}
