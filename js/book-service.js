@@ -12,7 +12,7 @@ function createBooks() {
     if (!books || !books.length) {
         books = [];
         for (let i = 0; i < 20; i++) {
-            const bookImgUrl = `../img/${gTitle[i]}.jpg`;
+            const bookImgUrl = `./img/${gTitle[i]}.jpg`;
             const book = _createBook(gTitle[i], 0, bookImgUrl);
             book.i = i;
             books.push(book);
